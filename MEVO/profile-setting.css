@@ -1,0 +1,186 @@
+:root{
+    font-size: 8px;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+
+
+body{
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+/*-------------------HEADER-------------------*/
+.head-tag{
+    margin-top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    z-index: 50;
+    margin-bottom: 20px;
+}
+.wrapper-header{
+    position: absolute;
+    margin:0;
+    padding:0;
+}
+
+.logo{
+    margin-left: 100px;
+    margin-right: 20px;
+    max-width: 100px;
+    max-height: 80px;
+}
+
+
+.bar{
+    margin-top: 25px;
+    margin-right: 50px;
+    float:right;
+    height:100%;
+}
+
+.bar li{
+    display: inline-block;
+    font-size:2rem;
+    line-height: 1.5;
+    margin-right:4rem;
+    cursor:pointer;
+
+}
+/*-----------------------SETTING---------------------*/
+.category{
+    margin: 0;
+    width: 800px ;
+    height: auto;
+    top: 100px;
+    padding: 0;
+    float: left;
+    position: relative;
+    background-color: #262626;
+
+}
+
+.category-wrapper{
+    padding:0 5rem;
+    padding-bottom: 3rem;
+    margin: 0 0 0 50px;
+    position: fixed;
+    background-color: #fafafa;
+    width: 200px;
+    border-style: solid;
+}
+
+.category-wrapper ul{
+    list-style-type: none;
+    text-align:center;
+}
+
+.category-wrapper ul li{
+    margin-top: 5rem;
+}
+
+
+.setting-element p{
+    font-size: 2.5rem;
+    color: #262626;
+}
+.setting-element{
+    display: block;
+}
+
+.setting-text{
+    display: inline-block;
+    padding-left: 10px;
+    white-space: normal;
+}
+
+.setting-icon{
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 10px;
+    vertical-align: center;
+}
+
+/*--------------------SETTING SITE-----------------------------*/
+
+.setting-site{
+    margin-left: 300px;
+    margin-right: 30px;
+    margin-top: 100px;
+    padding: 0;
+    position: relative;
+    float: left;
+    min-height: 600px;
+}
+.setting-site-wrapper{
+    padding: 50px;
+    background-color: #262626;
+    min-height: 500px;
+    min-width: 500px;
+    max-width: 900px;
+    color: #67b168;
+}
+
+.setting-site-wrapper h1{
+    font-size: 4rem;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+
+.list-setting-element{
+    font-size: 2rem;
+}
+
+.list-setting-element ul{
+    list-style-type: none;
+}
+
+.list-setting-element ul li{
+    margin-top: 20px;
+}
+
+.setting-element-right{
+    display: block;
+}
+.setting-element-right h3{
+    float: left;
+    margin-right: 30px;
+
+}
+.setting-element-right span{
+    margin-right: 30px;
+}
+
+.btn-edit{
+    float:right;
+}
+
+/*--------------------------GRID---------------------*/
+.row{
+    text-align: center;
+
+}
+.setting-box{
+    margin: 10px  10px;
+    cursor: pointer;
+    border-style: solid;
+
+}
+
+.setting-box-content{
+    margin: 20px;
+    font-size: 3.5rem;
+}
+

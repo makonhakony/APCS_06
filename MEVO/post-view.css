@@ -1,0 +1,195 @@
+:root{
+    font-size: 10px;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+
+
+body{
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+/*-------------------HEADER-------------------*/
+.head-tag{
+    margin-top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    z-index: 50;
+    margin-bottom: 20px;
+}
+.wrapper-header{
+    position: absolute;
+    margin:0;
+    padding:0;
+}
+
+.logo{
+    margin-left: 100px;
+    margin-right: 20px;
+    max-width: 100px;
+    max-height: 80px;
+}
+
+
+.bar{
+    margin-top: 25px;
+    margin-right: 50px;
+    float:right;
+    height:100%;
+}
+
+.bar li{
+    display: inline-block;
+    font-size:2rem;
+    line-height: 1.5;
+    margin-right:4rem;
+    cursor:pointer;
+
+}
+
+/*-----------------------Banner--------------*/
+.banner {
+    width: 100%;
+    height: 400px;
+    position: fixed;
+    top: 80px;
+    background-size: cover;
+}
+
+/*------------------CONTENT-------------------*/
+.container{
+    background-color: #dbdbdb;
+    padding: 0;
+    top: 480px;
+    width: 100%;
+    height: auto;
+    position:relative;
+    background-size: cover;
+    padding-bottom: 7rem;
+
+}
+.content{
+
+    max-width: 120rem;
+    margin:0 auto;
+    padding:0 2rem;
+    position:relative;
+
+
+
+}
+
+.content-wrapper{
+    padding:6rem;
+}
+
+.top-img{
+    box-shadow: 20px -20px 10px rgba(0,0,0,0.5);
+    width: 400px;
+    height: 600px;
+    float: right;
+    margin-left:6rem;
+    margin-bottom:4rem;
+}
+
+.story-site{
+    margin-top: 5rem;
+    font-size: 2.2rem;
+    font-family: SansSerif;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+.content-wrapper h1{
+    font-size: 4.5rem;
+    font-family: "Bodoni MT";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.story-site p{
+    margin-top: 20px;
+}
+
+/*-----------------POPUP--------------*/
+.popup{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    display: block;
+    right:60px;
+    bottom: 60px;
+
+}
+
+.popup img{
+    background-size: contain;
+}
+
+/*--------------------AUTHOR----------------------------*/
+.author {
+    background-color: #262626;
+    width: 100%;
+    min-height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.author-wrapper{
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.profile-avatar{
+    margin-top: 50px;
+    position: relative;
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+    box-shadow:-10px 10px 10px rgba(0,0,0,0.7);
+
+}
+
+.information-box{
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    color: #fafafa;
+
+}
+
+.information-box p{
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow:-10px 10px 10px rgba(0,0,0,0.7);
+}
+
+.information-box ul{
+    list-style-type: none;
+}
+
+.information-box ul li{
+    display:inline-block;
+    height: 50px;
+    width: 50px;
+}
+/*---------------------------popup----------------*/
+.fixedbutton{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*---------------------COMMENT-----------------------*/
