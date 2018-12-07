@@ -1,0 +1,194 @@
+
+
+body {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: url(https://4.bp.blogspot.com/-QzXaS7IPCvU/UPrJhWupMyI/AAAAAAAACHM/TZ4fW2OLTuI/s1600/Wallpapers+HD+1080P.jpg);
+    background-size: cover;
+    
+    z-index: 0;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+ 
+figure {
+    margin: 0;
+    padding: 0;
+}
+ 
+figcaption {
+    font-family: "Georgia","Times New Roman",serif;
+    text-align: center;
+    padding: 0.5em 0 1em 0;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia","Times New Roman",serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+ 
+h1 {
+    font-size: 328.571%;
+    margin-bottom: 0.2em;
+}
+ 
+h1.title {
+    text-align: center;
+}
+ 
+h2 {
+    font-size: 250%;
+    margin-bottom: 0.2em;
+}
+ 
+h3 {
+    font-size: 150%;
+    margin-bottom: 0.2em;
+}
+ 
+p {
+    margin:0;
+    padding: 0 0 1em 0;
+}
+
+button{
+    margin: 0 auto;
+}
+
+div.header{
+    text-align:center;
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    background-size: auto;
+    
+}
+ 
+.wrapper {
+    background-color: #fff;
+    color: #444; 
+    padding: 1em 3% 1em 3%;
+    margin: 0 auto 1em auto;
+ 
+}
+ 
+.mainnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 120%;
+}
+ 
+.mainnav a:link, .mainnav a:visited {
+    text-decoration: none;
+    color: #444;
+}
+ 
+.quote {
+    font: 150%/1.4 "Georgia","Times New Roman",serif;
+    padding: 0;
+    margin: 0;
+}
+
+.button:hover {
+    background-color: rgb(191, 191, 191);
+}
+
+<!-- Style main -->
+            .wrapper {
+                width: 960px;
+                padding: 1em 3% 1em 3%;
+                margin: 0 auto 1em auto;
+                display: grid;
+                grid-template-columns: 200px 40px auto 40px 200px;
+                grid-template-rows: auto ;
+            }
+ 
+            .content {
+                grid-column-start: ;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+ 
+            .mainnav {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+ 
+            .subhead {
+                grid-row-start: 1;
+                grid-row-end:2;
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+ 
+            .quote {
+                grid-column-start: 5;
+                grid-column-end: 6;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            .button {
+                background-color: rgb(255, 255, 255); /* Green */
+                border: none;
+                color: rgb(128, 128, 128);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                float: left;
+                position:relative;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            form.example input[type=text] {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+            }
+
+            form.example button {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background: #2196F3;
+                color: white;
+                font-size: 17px;
+                border: 1px solid grey;
+                border-left: none;
+                cursor: pointer;
+            }   
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+            form.example::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
