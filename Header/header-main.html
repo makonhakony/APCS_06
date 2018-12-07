@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Harmattan">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="header-main.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -32,20 +32,22 @@
             <nav>
                 <div class="menu-left">
                     <ul>
-                        <li><a class="logo" href="#" >MEVO</a></li>
-                        <li><a class="menu-search" href="#">Explore</a></li>
+                        <li><a class="logo" href="header-main.html" >MEVO</a></li>
+                        <li><a class="menu-search" href="Explore.html">Explore</a></li>
 
                         <label for="search-field" style="color: white"><i class="fa fa-search" ></i></label>
-                        <input class="search-field"
-                               type="search" name="search" id="search-field" style="color:#444444; width:364px;">
+                        <form class ="form-inline" target="_self">
+                            <input class="search-field"
+                                   type="search" name="search" id="search-field" placeholder="Search">
+                        </form>
                     </ul>
                 </div>
 
                 <div class="menu-right">
                     <ul>
                         <li><a class="home" href="#">Home</a></li>
-                        <li><a class="login" href="#">Log in</a></li>
-                        <li><a class="active" href="#">Sign up</a></li>
+                        <li><a class="login" href="Project.html">Log in</a></li>
+                        <li><a class="active" href="Register.html">Sign up</a></li>
                     </ul>
                 </div>
             </nav>
@@ -59,7 +61,7 @@
          </div>
 
         <div class="contact">
-            <a class="learnmore" href="#">Learn more about us</a>
+            <a class="learnmore" href="learn-more.html">Learn more about us</a>
         </div>
 
     </div>
