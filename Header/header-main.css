@@ -268,7 +268,14 @@ nav .menu-right ul li a.login {
 }*/
 
 
-
+nav .menu-right-icon ul li a.home {
+    text-decoration: none;
+    color:#37434d;
+    font-size: 16px;
+}
+nav .menu-right-icon ul li a.home:hover {
+    border-bottom: 1px solid #37434d;
+}
 .comment {
     color:#37434d;
     cursor: pointer;
