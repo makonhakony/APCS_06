@@ -77,6 +77,7 @@ body{
     position:relative;
     background-size: cover;
     padding-bottom: 7rem;
+    box-shadow:0 -15px 15px rgba(0,0,0,0.3);
 
 }
 .content{
@@ -91,50 +92,66 @@ body{
 }
 
 .content-wrapper{
-    padding:6rem;
+    padding:6rem 8rem;
 }
 
 .top-img{
-    box-shadow: 20px -20px 10px rgba(0,0,0,0.5);
-    width: 400px;
-    height: 600px;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+    max-width: 300px;
+    max-height: 500px;
     float: right;
     margin-left:6rem;
     margin-bottom:4rem;
 }
-
+.post-img{
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+    max-width: 400px;
+    max-height: 600px;
+    margin-bottom:4rem;
+    display: block ;
+    float:left;
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
 .story-site{
-    margin-top: 5rem;
-    font-size: 2.2rem;
-    font-family: SansSerif;
+    font-size: 1.8rem;
+    font-family: SansSerif,"Open Sans",Serif;
     line-height: 1.6em;
     text-align: justify;
+    font-weight: 500;
+}
+.header-caption{
+    top: 200px;
+    position: fixed;
+    text-align: center;
+    vertical-align: center;
 }
 
-.content-wrapper h1{
+.header-caption h1{
+    color: white;
     font-size: 4.5rem;
-    font-family: "Bodoni MT";
+    font-family: "Bodoni MT", SansSerif, serif;
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-shadow:-5px 5px 10px rgba(0,0,0,0.7);
 }
 .story-site p{
     margin-top: 20px;
+
 }
 
 /*-----------------POPUP--------------*/
-.popup{
+/*.fixedbutton{
     height: 50px;
     width: 50px;
     position: fixed;
     display: block;
-    right:60px;
-    bottom: 60px;
+    margin-right:10px;
+    margin-bottom: 30px;
+    z-index: 10;
 
-}
+}*/
 
-.popup img{
-    background-size: contain;
-}
 
 /*--------------------AUTHOR----------------------------*/
 .author {
@@ -186,10 +203,36 @@ body{
     width: 50px;
 }
 /*---------------------------popup----------------*/
-.fixedbutton{
+.fixed-button-mess {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 30px;
+    right: 20px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+.fixed-button-love{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.fixed-button-more{
+    position: fixed;
+    bottom: 170px;
+    right: 20px;
+    z-index: 10;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
 /*---------------------COMMENT-----------------------*/
