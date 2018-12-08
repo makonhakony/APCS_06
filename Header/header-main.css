@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
 
+
 }
 
 header {
@@ -230,4 +231,65 @@ form.form-inline {
     color:#eeeeee;
     background-color:#208f8f;
 
+}
+
+
+/********************************/
+nav .menu-right-icon {
+    float: right;
+}
+nav .menu-right-icon ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 150px;
+}
+nav .menu-right-icon ul li {
+    display: inline-block;
+    padding:10px 20px;
+}
+
+/*
+nav .menu-right-2 ul li a.home {
+    text-decoration: none;
+    color:#37434d;
+    font-size: 16px;
+}
+nav .menu-right ul li a.home:hover {
+    border-bottom: 1px solid #37434d;
+}
+nav .menu-right ul li a.login {
+    text-decoration: none;
+    color:#37434d;
+    font-size: 16px;
+}*/
+
+
+
+.comment {
+    color:#37434d;
+    cursor: pointer;
+    font-size: 30px;
+}
+.comment:hover {
+    opacity: 0.6;
+}
+.notification {
+    color:#37434d;
+    cursor: pointer;
+    font-size: 30px;
+}
+.notification:hover {
+    opacity: 0.6;
+}
+.setting {
+    color:#37434d;
+    cursor: pointer;
+    font-size: 30px;
+}
+.setting:hover {
+    opacity: 0.6;
 }
