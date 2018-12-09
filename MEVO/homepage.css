@@ -126,7 +126,6 @@ body{
 }
 
 .center{
-    align:center;
     margin:auto;
     position: absolute;
     top: 45%;
@@ -233,7 +232,7 @@ body{
     animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {
-    background-image: url(imgsrc/image6.jpg);
+    background-image: url('imgsrc/image6.jpg');
     -webkit-animation-delay: 30s;
     -moz-animation-delay: 30s;
     -o-animation-delay: 30s;
