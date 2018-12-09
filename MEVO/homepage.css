@@ -199,9 +199,9 @@ body{
   line-height: 200px;
 	color: rgba(255,255,255, 0.8);
 }
-.slideshow li:nth-child(1) span { background-image: url(image1.jpg)}
+.slideshow li:nth-child(1) span { background-image: url(imgsrc/image1.jpg)}
 .slideshow li:nth-child(2) span {
-    background-image: url(image2.jpg);
+    background-image: url(imgsrc/image2.jpg);
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
@@ -209,7 +209,7 @@ body{
     animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-    background-image: url(image3.jpg);
+    background-image: url(imgsrc/image3.jpg);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -217,7 +217,7 @@ body{
     animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-    background-image: url(image4.jpg);
+    background-image: url(imgsrc/image4.jpg);
     -webkit-animation-delay: 18s;
     -moz-animation-delay: 18s;
     -o-animation-delay: 18s;
@@ -225,7 +225,7 @@ body{
     animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-    background-image: url(image5.jpg);
+    background-image: url(imgsrc/image5.jpg);
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -233,7 +233,7 @@ body{
     animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {
-    background-image: url(image6.jpg);
+    background-image: url(imgsrc/image6.jpg);
     -webkit-animation-delay: 30s;
     -moz-animation-delay: 30s;
     -o-animation-delay: 30s;
