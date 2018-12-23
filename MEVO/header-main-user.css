@@ -9,14 +9,16 @@ html {
     padding:0;
     margin: 0;
 }
-header {
+body {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
+    background: url(imgsrc/ornella-binni-102187-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
     margin: 0;
     padding: 0;
     width: 100%;
-    position: fixed;
-    z-index: 100;
 }
 .head-tag {
     padding:8px;
@@ -24,7 +26,7 @@ header {
     margin-top: 0px;
     background: rgba(255,255,255,0.7);
     display: inline-block;
-    position: fixed ;
+    position: fixed;
     width: 100%;
 }
 /*********/
@@ -47,16 +49,12 @@ header {
     padding:.67rem 1rem;
     text-transform: uppercase;
 }
-
 .logo {
     margin-left: 150px;
     margin-right: 20px;
     max-width: 90px;
     max-height: 80px;
 }
-
-
-
 .form-inline {
     display:inline-block;
     transition:border-bottom-color 0.3s;

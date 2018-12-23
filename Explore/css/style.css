@@ -1,0 +1,436 @@
+/***Photo caption**/
+html:not(.touch) .gallery-image figcaption, .touch .gallery-image figcaption, .mfp-with-zoom .mfp-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0);
+    padding: 1em;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    max-width: calc(100% - 9em);
+    line-height: 1.25;
+    text-align: center;
+    box-sizing: border-box;
+}
+/***photo caption box****/
+html:not(.touch) .gallery-image figcaption:before, .touch .gallery-image figcaption:before, .mfp-with-zoom .mfp-title:before, html:not(.touch) .gallery-image figcaption:after, .touch .gallery-image figcaption:after, .mfp-with-zoom .mfp-title:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+}
+html:not(.touch) .gallery-image figcaption:before, .touch .gallery-image figcaption:before, .mfp-with-zoom .mfp-title:before, html:not(.touch) .gallery-image figcaption:after, .touch .gallery-image figcaption:after, .mfp-with-zoom .mfp-title:after {
+    right: 100%;
+    bottom: 100%;
+}
+html:not(.touch) .gallery-image figcaption:after, .touch .gallery-image figcaption:after, .mfp-with-zoom .mfp-title:after {
+    left: 100%;
+    top: 100%;
+}
+/******photo caption text*/
+html:not(.touch) .gallery-image figcaption.visible, html:not(.touch) .gallery-image:hover figcaption, .touch .gallery-image figcaption, .mfp-with-zoom .visible.mfp-title, .mfp-with-zoom.mfp-ready .mfp-title {
+    color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.2s ease 0.3s;
+    transition: all 0.2s ease 0.3s;
+}
+/******photo caption box opacity*/
+html:not(.touch) .gallery-image figcaption.visible:before, html:not(.touch) .gallery-image:hover figcaption:before, .touch .gallery-image figcaption:before, .mfp-with-zoom .visible.mfp-title:before, .mfp-with-zoom.mfp-ready .mfp-title:before, html:not(.touch) .gallery-image figcaption.visible:after, html:not(.touch) .gallery-image:hover figcaption:after, .touch .gallery-image figcaption:after, .mfp-with-zoom .visible.mfp-title:after, .mfp-with-zoom.mfp-ready .mfp-title:after {
+    opacity: 1;
+}
+/****left box****/
+html:not(.touch) .gallery-image figcaption.visible:before, html:not(.touch) .gallery-image:hover figcaption:before, .touch .gallery-image figcaption:before, .mfp-with-zoom .visible.mfp-title:before, .mfp-with-zoom.mfp-ready .mfp-title:before {
+    right: -1.5em;
+    bottom: -1.5em;
+}
+/****right box***/
+html:not(.touch) .gallery-image figcaption.visible:after, html:not(.touch) .gallery-image:hover figcaption:after, .touch .gallery-image figcaption:after, .mfp-with-zoom .visible.mfp-title:after, .mfp-with-zoom.mfp-ready .mfp-title:after {
+    left: -1.5em;
+    top: -1.5em;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+body {
+    background-image: url(../img/ivan-vranic-254758-unsplash.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-family: "Montserrat", sans-serif;
+}
+.content {
+    display: inline-block;
+    width: 100%;
+}
+.menu {
+    float: left;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0);
+    /*padding-top: 30px;*/
+}
+.gallery {
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    background: rgba(255, 255, 255, 0.2);
+
+
+    /***********added*/
+    float: right;
+    margin-top: 80px;
+    margin-right: 60px;
+    margin-left: 10px ;
+    padding: 30px;
+    width: 900px;
+    /*height: 500px;
+    overflow: scroll;/
+
+    /**************/
+}
+@media (min-width: 480px) {
+    .gallery {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+}
+@media (min-width: 1260px) {
+    .gallery {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+.gallery-image {
+    margin: 10px 5px;
+    position: relative;
+    padding: 0;
+}
+.gallery-image:before, .gallery-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 16px solid rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    will-change: border;
+}
+.gallery-image:after {
+    border-width: 0;
+}
+.gallery-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+html:not(.touch) .gallery-image {
+    overflow: hidden;
+}
+html:not(.touch) .gallery-image:hover:before {
+    border-width: 16px;
+}
+html:not(.touch) .gallery-image:hover:after {
+    border-width: 32px;
+}
+.touch .gallery-image figcaption {
+    top: auto;
+    bottom: 2em;
+}
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.mfp-with-zoom.mfp-bg {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-with-zoom img.mfp-img {
+    padding: 0;
+}
+.mfp-with-zoom .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+}
+.mfp-with-zoom .mfp-container {
+    padding: 0;
+}
+.mfp-with-zoom .mfp-content {
+    overflow: hidden;
+}
+.mfp-with-zoom .mfp-bottom-bar {
+    top: auto;
+    bottom: 0;
+    margin-top: 0;
+}
+.mfp-with-zoom .mfp-title {
+    top: auto;
+    bottom: 2em;
+}
+
+.mfp-arrow {
+    opacity: 1;
+    margin-top: 0 !important;
+    width: 20%;
+    height: 30%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.mfp-arrow:before, .mfp-arrow:after {
+    margin: 0;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    -webkit-transform: rotate(-45deg) translate(-50%, -100%);
+    transform: rotate(-45deg) translate(-50%, -100%);
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+}
+.mfp-arrow:active {
+    -webkit-transform: translateY(-50%) scale(0.95);
+    transform: translateY(-50%) scale(0.95);
+}
+
+.mfp-arrow-left {
+    left: 0;
+}
+.mfp-arrow-left:before, .mfp-arrow-left:after {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+.mfp-arrow-left:after {
+    margin-left: 2rem;
+}
+.mfp-arrow-left:hover:before, .mfp-arrow-left:active:before {
+    margin-left: 2rem;
+}
+.mfp-arrow-left:hover:after, .mfp-arrow-left:active:after {
+    margin-left: 0;
+}
+
+.mfp-arrow-right {
+    right: 0;
+}
+.mfp-arrow-right:before, .mfp-arrow-right:after {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.mfp-arrow-right:after {
+    margin-left: 2rem;
+}
+.mfp-arrow-right:hover:before {
+    margin-left: 2rem;
+}
+.mfp-arrow-right:hover:after {
+    margin-left: 0;
+}
+
+button.mfp-close {
+    opacity: 1;
+    margin-top: 0 !important;
+    width: 20%;
+    height: 30%;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+}
+button.mfp-close:before, button.mfp-close:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+button.mfp-close:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+button.mfp-close:after {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+button.mfp-close:hover:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+button.mfp-close:hover:after {
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+button.mfp-close:active {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/**********************************/
+/* define a fixed width for the entire menu */
+.navigation {
+    width: auto;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu {
+    font-family: "Calibri Light", sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 18px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+
+    /****added*****/
+    box-sizing: border-box;
+    border: solid 1px transparent;
+    transition: 0.2s;
+
+    height: 50px;
+    line-height: 30px;
+}
+
+a.link1 {
+    background-image: url("../img/8c61649ed348de8dfbb207de939a6a72-700.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a.link2 {
+    background-image: url("../img/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link3 {
+    background-image: url("../img/1605-Architecture-Creativity-wHY-Louisville-Speed-Art-Museum-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link4 {
+    background-image: url("../img/penguins-fact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link5 {
+    background-image: url("../img/plane-over-water2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link6 {
+    background-image: url("../img/15456-rain-drops-on-the-window-1920x1200-abstract-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link7 {
+    background-image: url("../img/hugefyzlf59pniqzb8qd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a.link8 {
+    background-image: url("../img/beads.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    box-sizing: border-box;
+    border: solid 1px #5e5936;
+    /*background-color: #fffb89;*/
+    background-color: rgba(255, 251, 137, 0.8);
+    font-size: 22px;
+    box-shadow: 6px 6px 5px #aaaaaa;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover {
+    display: block;
+    max-height: 200px;
+}
+
+
+/*************************************************/
+.menu {
+    position: fixed;
+}
