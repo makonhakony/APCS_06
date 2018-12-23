@@ -9,16 +9,14 @@ html {
     padding:0;
     margin: 0;
 }
-body {
+header {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
-    background: url(img/ornella-binni-102187-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
     margin: 0;
     padding: 0;
     width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 .head-tag {
     padding:8px;
@@ -26,7 +24,7 @@ body {
     margin-top: 0px;
     background: rgba(255,255,255,0.7);
     display: inline-block;
-    position: fixed;
+    position: fixed ;
     width: 100%;
 }
 /*********/
@@ -49,12 +47,16 @@ body {
     padding:.67rem 1rem;
     text-transform: uppercase;
 }
+
 .logo {
     margin-left: 150px;
     margin-right: 20px;
     max-width: 90px;
     max-height: 80px;
 }
+
+
+
 .form-inline {
     display:inline-block;
     transition:border-bottom-color 0.3s;
@@ -75,8 +77,8 @@ body {
 }
 .explore {
     margin-left: 20px;
-    transition:background-color 0.25s;
     margin-right: 20px;
+    transition:background-color 0.25s;
 }
 .explore:hover {
     background: rgba(255, 255, 255, 0.5);
@@ -93,7 +95,7 @@ body {
 }
 
 .menu-right-icon ul li:not(:first-child){
-    margin-left: 38px;
+    margin-left: 30px;
 }
 .menu-right-icon ul li:last-child{
     margin-right: 150px;
@@ -102,41 +104,40 @@ body {
 .menu-right-icon ul li a{
     display: inline-block;
     outline: none;
+    color: #37434d;
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1.2px;
     padding:.67rem 1rem;
     text-transform: uppercase;
-}
-
-.menu-right-icon ul li a:hover{
-    text-decoration: none;
+    transition:background-color 0.25s;
 }
 .menu-right-icon ul li i{
     display: inline-block;
     outline: none;
+    color: #37434d;
     text-decoration: none;
     font-size: 20px;
     padding:.67rem 0px;
+    cursor: pointer;
 }
-.home, .login {
-    color:#37434d;
-    transition:background-color 0.25s;
-    text-decoration: none;
-}
-.home:hover, .login:hover {
-    background: rgba(255, 255, 255, 0.5);
+.menu-right-icon ul li img{
+    max-width: 40px;
+    max-height: 40px;
+    display: inline-block;
+    border-radius: 50%;
 }
 /************************/
 .sign-up {
     text-decoration: none;
     background:#208f8f;
     color:#fff;
+    border-radius:20px;
     padding:.67rem 1rem;
     transition:background-color 0.25s;
 }
 .sign-up:hover {
-    background:#3ab7b7;
+    background:#269d9d;
     color:#fff;
     text-decoration: none;
 }
@@ -145,14 +146,13 @@ body {
     text-decoration: none;
 }
 .my-profile:hover {
-    border-bottom: 1px solid #37434d;
     color:#37434d;
     text-decoration: none;
 }
-.ava{
-    max-width: 40px;
-    max-height: 40px;
+.menu-right-icon ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
+
 
 input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
 input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
