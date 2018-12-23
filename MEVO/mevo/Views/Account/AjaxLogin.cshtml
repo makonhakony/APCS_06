@@ -1,0 +1,94 @@
+﻿@using mevo.Models
+
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/account")
+<div id="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="login100-form validate-form">
+                @Html.AntiForgeryToken()
+
+                <span class="login100-form-title">
+                    MEVO
+                </span>
+
+                <span class="login100-form-title" style="padding-bottom: 48px">
+
+                </span>
+                <input type="text" value=@ViewBag.ReturnUrl name="ReturnUrl" hidden="hidden" />
+
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                <div class="wrap-input100 validate-input" data-validate="Email required">
+                    <input class="input100" type="text" name="email" autocomplete="false">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Passsword">
+                    <span class="btn-show-pass">
+                        <i class="fa fa-eye"></i>
+                    </span>
+                    <input class="input100" type="password" name="password" autocomplete="new-password">
+                    <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <p style="color:red; font-size:12px; text-align:center">
+                    @(ViewData.ModelState["Error"] != null ? ViewData.ModelState["Error"].Errors[0].ErrorMessage : "")
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </p>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" id="btnLogin">
+                            Ajax Log in
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/account.js"></script>
+<script>
+    $(document).ready(function (e) {
+        var token = $('input[name="__RequestVerificationToken"]:eq(0)').val();
+
+        $('#btnLogin').on('click', function (e) {
+            $.ajax({
+                  url: '@Url.Action("AjaxLogin","Account")',
+                type: "POST",
+                data: {
+                    __RequestVerificationToken: token,
+                    model: {
+                        Email: $('input[name="email"]').val(),
+                        Password: $('input[name="password"]').val()
+                    }
+                },
+                success: function (data) {
+                    if (data && data.value) {
+                        alert("Đăng nhập bằng Ajax thành công! Chuyển về trang chủ");
+                        location.href = '@Url.Action("Index", "Home")'
+                    }
+                   
+                },
+                error: function (data) {
+                    alert("Đã có lỗi xảy ra. Mở console để xem chi tiết");
+                    console.log(data);
+                }
+            })
+        });
+
+
+    });
+</script>

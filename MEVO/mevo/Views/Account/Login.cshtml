@@ -1,0 +1,75 @@
+﻿@using mevo.Models
+
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/css/account")
+<div id="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form action="Account/Login">
+
+            </form>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <span class="login100-form-title">
+                    MEVO
+                </span>
+
+                <span class="login100-form-title" style="padding-bottom: 48px">
+
+                </span>
+                <input type="text" value=@ViewBag.ReturnUrl name="ReturnUrl" hidden="hidden" />
+
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                <div class="wrap-input100 validate-input" data-validate="Email required">
+                    <input class="input100" type="text" name="email" autocomplete="false">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Passsword">
+                    <span class="btn-show-pass">
+                        <i class="fa fa-eye"></i>
+                    </span>
+                    <input class="input100" type="password" name="password" autocomplete="new-password">
+                    <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <p style="color:red; font-size:12px; text-align:center">
+                    @(ViewData.ModelState["Error"] != null ? ViewData.ModelState["Error"].Errors[0].ErrorMessage : "")
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </p>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Log in
+                        </button>
+                    </div>
+                </div>
+
+                @*<div class="text-center" style="padding-top:30px">
+                        <span class="txt1">
+                            Forgot password?
+                        </span>
+
+                        <a class="txt2" href="@Url.Action("ForgotPassword","Account")">
+                            Lấy lại mật khẩu
+                        </a>
+                    </div>*@
+            }
+
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/account.js"></script>
