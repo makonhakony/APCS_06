@@ -6,12 +6,68 @@
     <link rel="stylesheet" href="post-view.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <link rel="stylesheet" href="comment.css" >
+    <link rel="stylesheet" href="popup-chat.css" >
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+
+
+    <!--bootstrap-->
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup-chat.css">-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header-main-user.html");
+        });
+    </script>
 </head>
-<body>
-    <a href=""><img src="imgsrc/popup-icon.png" class="fixed-button-mess"></a>
+<body class="loading">
+    <svg class="hidden">
+        <symbol id="icon-cross" viewBox="0 0 24 23">
+            <title>cross</title>
+            <path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z"/>
+        </symbol>
+    </svg>
+
+    <!--<a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span><img src="imgsrc/popup-icon.png" class="fixed-button-mess"></a>-->
+        <div class="open-button" onclick="openForm()"><img src="imgsrc/popup-icon.png" class="fixed-button-mess"></div>
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="username">Makon Hakony</h1>
+
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+
     <a href=""><img src="imgsrc/popup-icon-love.png" class="fixed-button-love"></a>
     <a href=""><img src="imgsrc/popup-icon-more.png" class="fixed-button-more"></a>
-    <nav>
+    <!--test-->
+    <!--test-->
+   <!-- <nav>
         <div class="wrapper-header">
             <div class="head-tag">
                 <img src="imgsrc/logo.png" class="logo">
@@ -25,31 +81,81 @@
             </div>
         </div>
 
-    </nav>
-    <header>
-        <div>
+    </nav>-->
+
+         <div id="header"></div>
+    <br/>
+
+    <div>
             <img class="banner" src="imgsrc/post-view-banner.png">
             <div class="header-caption">
                 <h1>The trip with my pussy cat and my cute girl friend to Tomorrow Land</h1>
             </div>
-
-        </div>
-    </header>
+    </div>
     <main>
         <div class="container">
-            <div class="content">
+            <div class="content-1">
                 <div class="content-wrapper">
-                    <img src="imgsrc/post-view-post-1.jpg" class="top-img">
+                    <div class="content">
+                        <div class="grid">
+                            <a class="grid__item" href="#preview-1">
+                                <div class="box">
+                                    <div class="box__shadow"></div>
+                                    <img class="box__img" src="imgsrc/post-view-post-1.jpg"/>
+                                    <h3 class="box__title"><span class="box__title-inner" data-hover="Memo">Memo</span></h3>
+                                    <h4 class="box__text"><span class="box__text-inner">Beast</span></h4>
+                                    <div class="box__deco">&#10014;</div>
+                                    <p class="box__content">"Sometimes we go surfing when it's stormy weather"</p>
+                                </div>
+                            </a>
+                            <a class="grid__item" href="#preview-11">
+                                <div class="box">
+                                    <div class="box__shadow"></div>
+                                    <img class="box__img" src="imgsrc/post-view-post-2.jpg" alt="Some image"/>
+                                    <h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="Grit">Grit</span></h3>
+                                    <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+                                    <div class="box__deco box__deco--top">&#10153;</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--<img src="imgsrc/post-view-post-1.jpg" class="top-img">-->
                     <div class="story-site">
                         <p>Sau khoảng 8 tiếng đồng hồ đi xe khách từ Bình Định, tôi đã đặt chân lên Đà Lạt lần thứ hai trong đời. Lần này Đà Lạt cũng đón tôi bằng cơn mưa nhưng là cơn mưa phùn se lạnh, đủ để người ta cảm nhận được cái lạnh xứ sở ngàn hoa này.<p>
                         <p>Trước khi đến đây, tôi đã mường tượng trong đầu về Đà Lạt, sẽ là Đà Lạt của hoa, của thông, của hơi lạnh và của sự dễ mến.<p>
                         <p>Nếu hồ Than Thở từng được nhắc đến như là một địa danh du lịch nổi tiếng của Đà Lạt với những câu chuyện tình yêu lãng mạn, thì với tôi, nơi đây ấn tượng bởi những bồn hoa rực rỡ của cẩm tú cầu, hoa lồng đèn, hoa bướm...<p>
-                        <img src="imgsrc/post-view-post-2.jpg" class="post-img">
                         <p>Tôi gọi bạn đến đón sau khi về tới khách sạn. Quả thật là “điếc không sợ súng”, trong khi người Đà Lạt áo lớp này tiếp lớp kia thì tôi mỗi cái quần short, áo pull với cái áo khoác mỏng tang vi vu dạo Đà Lạt về đêm.<p>
                         <p>Bạn tôi chở vòng qua những con đường của Đà Lạt, chỉ cho tôi những gì mà bạn biết. Vẫn nhớ lời mời đầy lôi cuốn về món bánh tráng nướng, tôi và bạn lượn qua Nguyễn Văn Trỗi. Thật sự ở Sài Gòn không thiếu chỗ bán, nhưng bánh tráng nướng ở Đà Lạt mà tôi ăn khác hẳn, không biết vì nó mang tên bánh tráng nướng Đà Lạt hay vì nó được mệnh danh là pizza Việt Nam nữa.<p>
                         <p>Lúc vừa xơi xong đĩa bánh là lúc thành phố lên đèn, đêm Đà Lạt hiền hòa lắm. Tôi thích thú với việc đường Đà Lạt chả có đèn xanh đỏ như Sài Gòn. Tôi còn nhớ rõ lúc hai đứa ngồi trên xe, nổ máy rồi, mà đèn hoài không sáng. Hai đứa đành ngậm ngùi chạy về nhà bạn để đổi xe khác. Nhờ đó mà tôi được nhìn cảnh Đà Lạt về đêm từ trên cao. </p>
                     </div>
                 </div>
+                <div class="overlay">
+                    <div class="overlay__reveal"></div>
+                    <div class="overlay__item" id="preview-1">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img box__img--original" src="imgsrc/post-view-post-1.jpg" alt="Some image"/>
+                            <h3 class="box__title"><span class="box__title-inner">Memo</span></h3>
+                            <h4 class="box__text"><span class="box__text-inner">Beast</span></h4>
+                            <div class="box__deco">&#10014;</div>
+                        </div>
+                        <p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+                    </div>
+                    <div class="overlay__item" id="preview-11">
+                        <div class="box">
+                            <div class="box__shadow"></div>
+                            <img class="box__img box__img--original" src="imgsrc/post-view-post-2.jpg" alt="Some image"/>
+                            <h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner">Grit</span></h3>
+                            <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+                            <div class="box__deco box__deco--top">&#10153;</div>
+                        </div>
+                        <p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+                    </div>
+                    <button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+                </div>
+                <script src="js/imagesloaded.pkgd.min.js"></script>
+                <script src="js/TweenMax.min.js"></script>
+                <script src="js/demo.js"></script>
             </div>
             <div class="author">
                 <div class="author-wrapper">
@@ -64,12 +170,57 @@
                     </div>
                 </div>
             </div>
-            <div class="comment">
-                <div class="comment-section-wrapper">
+            <div class="comment-box">
+                <div id="comment">
+                    <div class="comment-wrap">
+                        <div class="photo">
+                            <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
+                        </div>
+                        <div class="comment-block">
+                            <form action="">
+                                <textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="comment-wrap">
+                        <div class="photo">
+                            <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+                        </div>
+                        <div class="comment-block">
+                            <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
+                                sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
+                            <div class="bottom-comment">
+                                <div class="comment-date">Aug 24, 2014 @ 2:35 PM</div>
+                                <ul class="comment-actions">
+                                    <li class="complain">Complain</li>
+                                    <li class="reply">Reply</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-wrap">
+                        <div class="photo">
+                            <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
+                        </div>
+                        <div class="comment-block">
+                            <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
+                            <div class="bottom-comment">
+                                <div class="comment-date">Aug 23, 2014 @ 10:32 AM</div>
+                                <ul class="comment-actions">
+                                    <li class="complain">Complain</li>
+                                    <li class="reply">Reply</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
     </main>
+
 </body>
 </html>

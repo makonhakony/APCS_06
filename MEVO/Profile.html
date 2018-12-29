@@ -10,10 +10,20 @@
     <link rel="script" href="profile.js">
     <link rel="stylesheet" href="model.css">
 
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("header-main-user.html");
+        });
+    </script>
 </head>
 <body>
     <div class="body-wrapper">
-        <nav>
+        <!--<nav>
             <div class="wrapper-header">
                 <div class="head-tag">
                     <img src="imgsrc/logo.png" class="logo" >
@@ -27,9 +37,11 @@
                 </div>
             </div>
 
-        </nav>
-        <header>
-            <div class="container">
+        </nav>-->
+        <div id="header"></div>
+        <br/>
+        <div class="banner-div">
+            <div class="container-banner">
                 <div class="banner">
                     <div class="profile">
 
@@ -53,10 +65,10 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
         <main>
-            <div class="content">
-                <div class="container">
+            <div class="content-1">
+                <div class="container-gallery">
                     <div class="information-box">
                         <div class="following">
                             <p class="text-inf">Following</p>
