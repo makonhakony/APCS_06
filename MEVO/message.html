@@ -1,0 +1,222 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link href="https://static.thenounproject.com/png/918394-200.png" rel="icon">
+
+    <link rel="stylesheet" href="message.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>-->
+    <script>
+        $(function(){
+            $("#header").load("header-main-user.html");
+        });
+    </script>
+
+
+    <script src="message.js"></script>
+</head>
+<!--Coded With Love By Mutiullah Samim-->
+<body>
+<div id="header"></div>
+<br/> <br/>
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-md-4 col-xl-3 chat"> <!-- Left content-->
+            <div class="card mb-sm-3 mb-md-0 contacts_card">
+                <div class="card-header">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search..." name="" class="form-control search">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body contacts_body">
+                    <ui class="contacts">
+                        <li class="active"><a href="#">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont" >
+                                    <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Teddy Bear</span>
+                                    <p>Teddy is online</p>
+                                </div>
+                            </div></a>
+                        </li>
+                        <li> <a href="#">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://image.freepik.com/free-vector/cute-animal-doing-dabbing_23-2147847948.jpg" class="rounded-circle user_img">
+                                    <span class="online_icon offline"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Unicorn</span>
+                                    <p>Unicorn left 7 mins ago</p>
+                                </div>
+                            </div></a>
+                        </li>
+                        <li> <a href="#">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://image.freepik.com/free-vector/watercolor-happy-birthday-cute-cartoon-panda_1340-7149.jpg" class="rounded-circle user_img">
+                                    <span class="online_icon"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Rainbow Dog</span>
+                                    <p>Rainbow is online</p>
+                                </div>
+                            </div></a>
+                        </li>
+                        <li> <a href="#">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://image.freepik.com/free-vector/christmas-animals_23-2148025398.jpg" class="rounded-circle user_img">
+                                    <span class="online_icon offline"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Reindeer Xmas</span>
+                                    <p>Reindeer left 30 mins ago</p>
+                                </div>
+                            </div></a>
+                        </li>
+                        <li> <a href="#">
+                            <div class="d-flex bd-highlight">
+                                <div class="img_cont">
+                                    <img src="https://image.freepik.com/free-vector/cute-wild-boar-cartoon-illustration_53876-66606.jpg" class="rounded-circle user_img">
+                                    <span class="online_icon offline"></span>
+                                </div>
+                                <div class="user_info">
+                                    <span>Chubby Mouse</span>
+                                    <p>Chubby left 50 mins ago</p>
+                                </div>
+                            </div></a>
+                        </li>
+                    </ui>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-xl-6 chat"> <!-- Righ content-->
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img">
+                            <span class="online_icon"></span>
+                        </div>
+                        <div class="user_info">
+                            <span>Chat with Bleue Whale</span>
+                            <p>1767 Messages</p>
+                        </div>
+                        <div class="video_cam">
+                            <span><i class="fas fa-video"></i></span>
+                            <span><i class="fas fa-phone"></i></span>
+                        </div>
+                    </div>
+                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                    <div class="action_menu">
+                        <ul>
+                            <li><i class="fas fa-user-circle"></i> View profile</li>
+                            <li><i class="fas fa-users"></i> Add to close friends</li>
+                            <li><i class="fas fa-plus"></i> Add to group</li>
+                            <li><i class="fas fa-ban"></i> Block</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body msg_card_body">
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            Hi, how are you today?
+                            <span class="msg_time">8:40 AM, Today</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            Hi Bear i am good thx how about you?
+                            <span class="msg_time_send">8:55 AM, Today</span>
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/51CNRx0YbdL._SX425_.jpg" class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            I am good too, thank you for your chat template
+                            <span class="msg_time">9:00 AM, Today</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            You welcome
+                            <span class="msg_time_send">9:05 AM, Today</span>
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/51CNRx0YbdL._SX425_.jpg" class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            I am looking for your next templates
+                            <span class="msg_time">9:07 AM, Today</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            Ok, thank you have a good day
+                            <span class="msg_time_send">9:10 AM, Today</span>
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/51CNRx0YbdL._SX425_.jpg" class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/71422/580/386/m1/fpnw/wm0/animals_002_thumb-.jpg?1391683951&s=a9c1e8e5227886cd5d15468d8f1f9314" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            Bye, see you
+                            <span class="msg_time">9:12 AM, Today</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                        </div>
+                        <textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                        <div class="input-group-append">
+                            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
