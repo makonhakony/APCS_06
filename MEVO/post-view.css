@@ -19,7 +19,7 @@ body{
 }
 
 /*-------------------HEADER-------------------*/
-.head-tag{
+/*.head-tag{
     margin-top: 0;
     width: 100%;
     height: 80px;
@@ -56,22 +56,29 @@ body{
     margin-right:4rem;
     cursor:pointer;
 
-}
+}*/
 
 /*-----------------------Banner--------------*/
 .banner {
     width: 100%;
     height: 400px;
     position: fixed;
-    top: 80px;
+    top: 60px;
     background-size: cover;
+}
+.header-caption{
+    top: 200px;
+    position: fixed;
+    text-align: center;
+    vertical-align: center;
+    padding: 0 30px;
 }
 
 /*------------------CONTENT-------------------*/
 .container{
     background-color: #dbdbdb;
     padding: 0;
-    top: 480px;
+    top: 450px;
     width: 100%;
     height: auto;
     position:relative;
@@ -80,29 +87,27 @@ body{
     box-shadow:0 -15px 15px rgba(0,0,0,0.3);
 
 }
-.content{
-
+.content-1{
     max-width: 120rem;
     margin:0 auto;
     padding:0 2rem;
     position:relative;
-
-
-
 }
 
 .content-wrapper{
     padding:6rem 8rem;
 }
 
-.top-img{
+/*.box__img{
+    flex: none;
+    display: block;
     box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
     max-width: 300px;
     max-height: 500px;
     float: right;
     margin-left:6rem;
     margin-bottom:4rem;
-}
+}*/
 .post-img{
     box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
     max-width: 400px;
@@ -120,12 +125,7 @@ body{
     text-align: justify;
     font-weight: 500;
 }
-.header-caption{
-    top: 200px;
-    position: fixed;
-    text-align: center;
-    vertical-align: center;
-}
+
 
 .header-caption h1{
     color: white;
@@ -170,11 +170,14 @@ body{
 
 .profile-avatar{
     margin-top: 50px;
-    position: relative;
+    position: inherit;
     border-radius: 50%;
     height:150px;
     width:150px;
     box-shadow:-10px 10px 10px rgba(0,0,0,0.7);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 
 }
 
@@ -203,11 +206,14 @@ body{
     width: 50px;
 }
 /*---------------------------popup----------------*/
+.mess-button{
+    z-index: 10;
+}
 .fixed-button-mess {
     position: fixed;
     bottom: 30px;
     right: 20px;
-    z-index: 10;
+
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -235,4 +241,13 @@ body{
     box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
+.username{
+    font-size: 3rem;
+    text-align: center;
+    padding:2px 5px;
+}
 /*---------------------COMMENT-----------------------*/
+.comment-box{
+    max-width: 100rem ;
+    margin:3rem 12rem ;
+}

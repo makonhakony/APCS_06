@@ -24,14 +24,13 @@ body{
 }
 
 /*-------------------NAV-------------------*/
-.head-tag{
+/*.head-tag{
     margin-top: 0;
     width: 100%;
     height: 80px;
     background: rgba(255,255,255,0.9);
     position: fixed;
     z-index: 3;
-    margin-bottom: 20px;
 }
 .wrapper-header{
     position: absolute;
@@ -61,14 +60,14 @@ body{
     margin-right:4rem;
     cursor:pointer;
 
-}
+}*/
 
 
 /*--------------------------HEADER---------------*/
-.container{
-    max-width: 120rem;
-    margin:0 auto;
-    padding:0 1.5rem;
+.container-banner{
+    width: 100%;
+    margin:0;
+    padding:0;
     position:relative;
     z-index: 1;
 
@@ -91,9 +90,7 @@ body{
     background-color: #262626;
     height: 300px;
     position: fixed;
-    top:80px;
-    background-size: inherit;
-    margin-left: -60px;
+    top:60px;
     color: white;
     text-shadow:-10px 10px 10px rgba(0,0,0,0.7);
 
@@ -232,17 +229,27 @@ body{
 }
 
 /*-----------------GALLERY------------------------*/
-.content{
+
+.container-gallery{
+    width: 100%;
+    margin:0;
+    padding:0 7rem;
+    position:relative;
+    z-index: 1;
+
+}
+.content-1{
     z-index: 2;
     width:100%;
     position: relative;
-    top: 380px;
+    top: 350px;
     height:auto;
     background: url("imgsrc/background2-edit.jpeg");
     display: -moz-box;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.2) ;
     background-size: cover;
 }
+
 
 .gallery{
     display:flex;
@@ -401,4 +408,12 @@ body{
     width:auto;
     height:auto;
     padding-top: 20px;
+}
+
+main{
+    z-index: 2;
+}
+
+.banner-div{
+    z-index: 0;
 }
