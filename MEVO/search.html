@@ -1,317 +1,294 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {box-sizing: border-box;}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* Style page content - use this if you want to push the page content to the right when you open 
-the side navigation */
-#main {
-    transition: margin-left .2s;
-}
-/*The side Navigation menu*/
-.sideNav{
-    height: 100%;
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place*/
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden; /*Disable horizontal scroll*/
-    padding-top: 60px; /*Place content 60px from the top */
-    transition: 0.2s; /* 0.3 second transition effect to slide in the sidenav */
-    text-align: right;
-}
-
-/*The navigation menu links */
-.sideNav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s; /* 0.3s second transition effect to slide in menu button */
-}
-
-/*When your mouse over the navigation links, change their color */
-.sideNav:hover {
-    color:#f1f1f1;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-.container {
-    display: inline-block;
-    cursor: pointer;
-    float: left;
-    padding: 5px;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #ddd;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #111;
-  height: 50px;
-}
-
-.topnav .search-container {
-  float: left;
-  padding-left: 3%;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-.topnav .search-container button {
-  position: relative;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
-
-.grid-hint {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  padding: 10px;
-  padding-right: 100px;
-  padding-left: 100px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  position: relative;
-}
-
-.grid-item:hover .hint-img {
-  opacity: 0.3;
-}
-
-.grid-item:hover .text-img {
-  opacity: 1;
-}
-
-.grid-item .text-img {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: black;
-  font-size: 16px;
-
-}
-
-.row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    padding: 0 4px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <!--CSS FILES-->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header-main-user.html");
+        });
+    </script>
 </head>
-<body oncontextmenu="return false">
-  <div id="mySidenav" class="sideNav">
-    <a href="#">ABOUT</a>
-    <a href="#">HOME</a>
-    <a href="#">MY PROFILE</a>
-    <a href="#">NOTIFICATION</a>
-  </div>
-  <div id="main">
-    <div class="topnav">
-      <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <div class="grid-hint">
-      <div class="grid-item">
-        <img src="imgsrc/natural.jpg" width="150px" height="150px" class="hint-img">
-          <div class="text-img">natural</div>
-      </div>
-      <div class="grid-item">
-        <img src="imgsrc/city.jpg" width="150px" height="150px" class="hint-img">
-          <div class="text-img">city</div>
-      </div>
-      <div class="grid-item">
-        <img src="imgsrc/restaurant.jpg" width="150px" height="150px" class="hint-img">
-          <div class="text-img">restaurant</div>
-      </div>
-      <div class="grid-item">
-        <img src="imgsrc/cafe.jpg" width="150px" height="150px" class="hint-img">
-          <div class="text-img">café</div>
-      </div>
-      <div class="grid-item">
-          <img src="imgsrc/river.jpg" width="150px" height="150px" class="hint-img">
-            <div class="text-img">river</div>
-      </div>
-      <div class="grid-item">
-          <img src="imgsrc/sea.jpeg" width="150px" height="150px" class="hint-img">
-            <div class="text-img">sea</div>
-      </div>
-    </div>
-    <!-- Photo Grid -->
-    <div class="row"> 
-      <div class="column">
-        <img src="imgsrc/natural.jpg" style="width:100%">
-        <img src="imgsrc/cafe.jpg" style="width:100%">
-        <img src="imgsrc/city.jpg" style="width:100%">
-        <img src="imgsrc/restaurant.jpg" style="width:100%">
-        <img src="imgsrc/river.jpg" style="width:100%">
-        <img src="imgsrc/sea.jpeg" style="width:100%">
-        <img src="imgsrc/mevo.png" style="width:100%">
-      </div>
-      <div class="column">
-        <img src="imgsrc/cafe.jpg" style="width:100%">
-        <img src="imgsrc/city.jpg" style="width:100%">
-        <img src="imgsrc/natural.jpg" style="width:100%">
-        <img src="imgsrc/restaurant.jpg" style="width:100%">
-        <img src="imgsrc/cafe.jpg" style="width:100%">
-        <img src="imgsrc/river.jpg" style="width:100%">
-      </div>  
-      <div class="column">
-        <img src="imgsrc/natural.jpg" style="width:100%">
-        <img src="imgsrc/cafe.jpg" style="width:100%">
-        <img src="imgsrc/city.jpg" style="width:100%">
-        <img src="imgsrc/restaurant.jpg" style="width:100%">
-        <img src="imgsrc/river.jpg" style="width:100%">
-        <img src="imgsrc/sea.jpeg" style="width:100%">
-        <img src="imgsrc/restaurant.jpg" style="width:100%">
-      </div>
-      <div class="column">
-        <img src="imgsrc/sea.jpeg" style="width:100%">
-        <img src="imgsrc/city.jpg" style="width:100%">
-        <img src="imgsrc/natural.jpg" style="width:100%">
-        <img src="imgsrc/restaurant.jpg" style="width:100%">
-        <img src="imgsrc/cafe.jpg" style="width:100%">
-        <img src="imgsrc/river.jpg" style="width:100%">
-      </div>
-  </div>
-  </div>
+<style>
+    body{
+        background-color:#e2e7ee;
+    }
+    #main{
+        padding: 5% 10%;
+    }
+    .grid-horizontal{
+        display: inline;
+    }
+    .jumbotron{
+        padding: .5rem;
+        padding-left:10%;
+        margin: 0 10%;
+        background-color: white;
+    }
+    .AvatarImage{
+        float:left;
+    }
 
-<div style="padding-left:16px">
-  <h2>Responsive Search Bar</h2>
-  <p>Navigation bar with a search box and a submit button inside of it.</p>
-  <p>Resize the browser window to see the responsive effect.</p>
-</div>
-<script>
-a = true;
-function myFunction(x) {
-    x.classList.toggle("change");
-    if (a) {
-        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        a = false;
+    .AvatarImage img{
+        max-width: 100px;
+        border-radius: 50%;
+        padding: 0 10px;
     }
-    else {
-        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        a = true;
+
+    .UserInfo{
+        padding:10px 0;
+        border-bottom: 1px solid #e2e7ee;
+        background-color: white;
     }
-}
-</script>
+    
+    .tab-content{
+        padding:0 10%;
+    }
+    
+    .PostSearch{
+        border-bottom: 1px solid #e2e7ee;
+        min-height:220px;
+        padding-top: 10px;
+        background-color: white;
+    }
+
+    .BackgroundImage{
+        float: left;
+        height: 200px;
+    }
+
+    .BackgroundImage img{
+        height: 200px;
+        padding: 0 10px;
+    }
+
+    .PostDetail{
+        float: left;
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <!--MAIN CODE HTML-->
+    <header id="header"></header>
+    <main id="main" role="main">
+        <div class="jumbotron">
+            <form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Travel</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Foods and Drinks</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Universe</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Art</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Cultural</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Event</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Music</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Architecture</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> People</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Animal</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Plant</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Technology</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Vehicle</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Fashion</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Film</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" placeholder="Search"> Sport</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <ul class="nav nav-tabs" style="padding:0 10%;padding-top:10px">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#people">People</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#posts">Posts</a></li>
+            <!--<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>-->
+        </ul>
+        <div id="SearchResult">
+            <div class="tab-content">
+                <div id="people" class="tab-pane fade in active">
+                    <div class="UserInfo">
+                        <div class="AvatarImage">
+                            <a href="#"><img src="imgsrc/avatar1.jpg" alt="avatar1"></a>
+                        </div>
+                        <div class="detail">
+                            <h2>
+                                <a href="#"><b>Hong Chan Thanh</b></a>
+                                <p>
+                                    Bio: Love travel, wanna go around the world
+                                </p>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="UserInfo">
+                        <div class="AvatarImage">
+                            <a href="#"><img src="imgsrc/avatar1.jpg" alt="avatar1"></a>
+                        </div>
+                        <div class="detail">
+                            <h2>
+                                <a href="#"><b>Hong Chan Thanh</b></a>
+                                <p>
+                                    Bio: Love travel, wanna go around the world
+                                </p>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="UserInfo">
+                        <div class="AvatarImage">
+                            <a href="#"><img src="imgsrc/avatar1.jpg" alt="avatar1"></a>
+                        </div>
+                        <div class="detail">
+                            <h2>
+                                <a href="#"><b>Hong Chan Thanh</b></a>
+                                <p>
+                                    Bio: Love travel, wanna go around the world
+                                </p>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="posts" class="tab-pane fade">
+                    <div class="PostSearch">
+                        <div class="BackgroundImage">
+                            <a href="#">
+                                <img src="imgsrc/1605-Architecture-Creativity-wHY-Louisville-Speed-Art-Museum-01.jpg" alt="BackgroundImage">
+                            </a>
+                        </div>
+                        <div class="Postdetail">
+                            <div class="PostTitle">
+                                <a href="#">
+                                    <b>The trip with my pussy cat and my cute girl friend to tomorrow land</b>
+                                </a>
+                                <p> Sau khoảng 8 tiếng đồng hồ đi xe khách từ Bình Định, tôi đã đặt chân lên Đà Lạt lần
+                                    thứ
+                                    hai trong đời. Lần này Đà Lạt cũng đón tôi bằng cơn mưa nhưng là cơn mưa phùn se
+                                    lạnh,
+                                    đủ để người ta cảm nhận được cái lạnh xứ sở ngàn hoa này.
+                                    <a href="#"> Read More </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PostSearch">
+                        <div class="BackgroundImage">
+                            <a href="#">
+                                <img src="imgsrc/1605-Architecture-Creativity-wHY-Louisville-Speed-Art-Museum-01.jpg" alt="BackgroundImage">
+                            </a>
+                        </div>
+                        <div class="Postdetail">
+                            <div class="PostTitle">
+                                <a href="#">
+                                    <b>The trip with my pussy cat and my cute girl friend to tomorrow land</b>
+                                </a>
+                                <p> Sau khoảng 8 tiếng đồng hồ đi xe khách từ Bình Định, tôi đã đặt chân lên Đà Lạt lần
+                                    thứ
+                                    hai trong đời. Lần này Đà Lạt cũng đón tôi bằng cơn mưa nhưng là cơn mưa phùn se
+                                    lạnh,
+                                    đủ để người ta cảm nhận được cái lạnh xứ sở ngàn hoa này.
+                                    <a href="#"> Read More </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PostSearch">
+                        <div class="BackgroundImage">
+                            <a href="#">
+                                <img src="imgsrc/1605-Architecture-Creativity-wHY-Louisville-Speed-Art-Museum-01.jpg" alt="BackgroundImage">
+                            </a>
+                        </div>
+                        <div class="Postdetail">
+                            <div class="PostTitle">
+                                <a href="#">
+                                    <b>The trip with my pussy cat and my cute girl friend to tomorrow land</b>
+                                </a>
+                                <p> Sau khoảng 8 tiếng đồng hồ đi xe khách từ Bình Định, tôi đã đặt chân lên Đà Lạt lần
+                                    thứ
+                                    hai trong đời. Lần này Đà Lạt cũng đón tôi bằng cơn mưa nhưng là cơn mưa phùn se
+                                    lạnh,
+                                    đủ để người ta cảm nhận được cái lạnh xứ sở ngàn hoa này.
+                                    <a href="#"> Read More </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--SCRIPT FILES-->
+    <script src="js/bootstrap.min.js"></script>
 </body>
-</html>

@@ -1,38 +1,189 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="homepage.css">
-    </head>
-    <body>
-        <div id="mySidenav" class="sideNav">
-            <a href="#">ABOUT</a>
-            <a href="#">HOME</a>
-            <a href="#">MY PROFILE</a>
-            <a href="#">NOTIFICATION</a>
-        </div>
-        
-        <div id="main">
-            
-            <ul class="slideshow">
-                <li><span>Image 01</span></li>
-                <li><span>Image 02</span></li>
-                <li><span>Image 03</span></li>
-                <li><span>Image 04</span></li>
-                <li><span>Image 05</span></li>
-                <li><span>Image 06</span></li>
-              </ul>
-                <div class="container" onclick="myFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>   
-                <div class="center" align="center">
-                    <div class="content"><h1>Follow your dream.</h1></div>
-                    <a style="text-decoration:none" rel="Click here" href="/signup" class="button">Register</a>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--CSS FILES-->
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header-main-user.html");
+        });
+    </script>
+</head>
+<style>
+    #main {
+        padding: 5% 10%;
+    }
+
+    .container {
+        max-width: 70%;
+    }
+
+    .img {
+        float: left;
+    }
+
+    .detail {
+        float: right;
+        max-width: 80%;
+    }
+
+    .IntroInfo {
+        padding: 40px;
+        max-width: 60%;
+    }
+
+    .title-fs {
+        border-bottom: 3px solid black;
+        position: relative;
+    }
+
+    .IntroContent {
+        border-top: 1px solid #DEEBDA;
+        min-height: 320px;
+    }
+</style>
+
+<body>
+    <!--MAIN CODE HTML-->
+    <header id="header"></header>
+    <main role="main" id="main">
+        <div class="ContentBlock">
+            <div class="row">
+                <div class="AboutContent">
+                    <div class="AboutImage" style="float: left">
+                        <img src="imgsrc/Windows_live_square.JPG" alt="WE ARE MeVo">
+                    </div>
+                    <div class="container" style="float: right">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h2 class="title-fs">
+                                    WE ARE
+                                    <p>
+                                        <b>the MEVO</b>
+                                    </p>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="img">
+                                    <img class="minilogo" src="https://img.icons8.com/nolan/64/000000/handle-with-care.png"
+                                        alt="PURPOSE">
+                                </div>
+                                <div class="detail">
+                                    <h3>PURPOSE</h3>
+                                    <div class="description">
+                                        <p>
+                                            As members of MeVo family, our motto is to build products with the highest
+                                            quality standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="img">
+                                    <img class="minilogo" src="https://img.icons8.com/nolan/64/000000/handle-with-care.png"
+                                        alt="PURPOSE">
+                                </div>
+                                <div class="detail">
+                                    <h3>PURPOSE</h3>
+                                    <div class="description">
+                                        <p>
+                                            As members of MeVo family, our motto is to build products with the highest
+                                            quality standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="img">
+                                    <img class="minilogo" src="https://img.icons8.com/nolan/64/000000/handle-with-care.png"
+                                        alt="PURPOSE">
+                                </div>
+                                <div class="detail">
+                                    <h3>PURPOSE</h3>
+                                    <div class="description">
+                                        <p>
+                                            As members of MeVo family, our motto is to build products with the highest
+                                            quality standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="img">
+                                    <img class="minilogo" src="https://img.icons8.com/nolan/64/000000/handle-with-care.png"
+                                        alt="PURPOSE">
+                                </div>
+                                <div class="detail">
+                                    <h3>PURPOSE</h3>
+                                    <div class="description">
+                                        <p>
+                                            As members of MeVo family, our motto is to build products with the highest
+                                            quality standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="IntroContent">
+                    <div class="IntroInfo" style="float:left">
+                        <div class="IntroTitle">
+                            <h2 class="title-fs">
+                                I dont know
+                                <p>
+                                    <b>What to say</b>
+                                </p>
+                            </h2>
+                        </div>
+                        <div class="des">
+                            <p>
+                                Carrying an ultimate mission to make the finest & most unique artisan keycaps, we have
+                                riddled hundreds of designs just to deliver to you perfect products.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="IntroImage" style="float:right">
+                        <img src="imgsrc/Windows_live_square.JPG" alt="IntroImage1" style="height:320px">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="IntroContent">
+                    <div class="IntroInfo" style="float:right">
+                        <div class="IntroTitle">
+                            <h2 class="title-fs">
+                                I dont know
+                                <p>
+                                    <b>What to say</b>
+                                </p>
+                            </h2>
+                        </div>
+                        <div class="des">
+                            <p>
+                                Carrying an ultimate mission to make the finest & most unique artisan keycaps, we have
+                                riddled hundreds of designs just to deliver to you perfect products.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="IntroImage" style="float:left">
+                        <img src="imgsrc/Windows_live_square.JPG" alt="IntroImage1" style="height:320px">
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <script src="homepage.js"></script>
-    </body>
-</html>
+    </main>
+    <!--SCRIPT FILES-->
+    <script src="js/bootstrap.min.js"></script>
+</body>
